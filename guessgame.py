@@ -15,15 +15,14 @@ for round in range(1, tries + 1):
     print("Tentativa {} de {}".format(round, tries)) 
     guess = input("Digite um número entre 1 e 100: ")
     #input sempre volta o resultado como string
+    guess = int(guess)
 
     print("Você digitou ", guess)
-
+    
     if(guess < 1 or guess > 100):
         print("Número inválido. O número deve ser entre 1 e 100.")
         #continue pula para a próxima iteração do for/while
         continue
-
-    guess = int(guess)
 
     #para adicionar condição no else usa elif
     if(guess == secret_number):

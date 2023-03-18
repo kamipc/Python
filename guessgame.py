@@ -1,7 +1,8 @@
 print("Bem vindo ao jogo de adivinhação!")
 
-secret_number = 42
-tries = 3
+import random
+secret_number = random.randrange(1, 101)
+tries = 5
 round = 1
 
 

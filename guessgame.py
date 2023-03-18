@@ -54,3 +54,8 @@ def play():
             score = score - lost_score
 
     print("Fim de Jogo.")
+
+#esse if verifica se o arquivo foi executado diretamente
+#se sim, executará então o jogo
+if(__name__ == "__main__"):
+    play()

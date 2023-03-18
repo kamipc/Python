@@ -3,7 +3,7 @@ print("Bem vindo ao jogo de adivinhação!")
 import random
 secret_number = random.randrange(1, 101)
 tries = 0
-
+score = 300
 
 print("Escolha o nível de dificuldade:")
 dif = int(input(" (1)Fácil (2)Médio (3)Difícil"))
@@ -39,6 +39,7 @@ for round in range(1, tries + 1):
     #para adicionar condição no else usa elif
     if(guess == secret_number):
         print("Você acertou!")
+        print(f"Foram feitos {score} pontos.")
         #break encerra o for/while finalizando o loop
         #seguindo para o código seguinte de fora
         break
@@ -47,5 +48,7 @@ for round in range(1, tries + 1):
             print("Incorreto! Seu número é maior do que o número secreto")
         else:
             print("Incorreto! Seu número é menor do que o número secreto")
+        lost_score = abs(guess - secret_number)
+        score = score - lost_score
 
 print("Fim de Jogo.")

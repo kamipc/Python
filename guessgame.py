@@ -2,10 +2,20 @@ print("Bem vindo ao jogo de adivinhação!")
 
 import random
 secret_number = random.randrange(1, 101)
-tries = 5
+tries = 0
 round = 1
 
-
+print("Escolha o nível de dificuldade:")
+dif = int(input(" (1)Fácil (2)Médio (3)Difícil"))
+1
+if(dif == 1):
+    tries = 20
+elif(dif == 2):
+    tries = 10
+elif(dif == 3):
+    tries = 5
+else:
+    print("Dificuldade inválido")
 #pode ser feito com while onde seria no lugar do for
 #while(round <= tries):
 #porém no fim do while teria de se adicionar 
